@@ -1,0 +1,69 @@
+[System]
+Name='fifthwithfuzzy'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=25
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='e'
+Range=[0 300]
+NumMFs=5
+MF1='NL':'trimf',[-75 0 75]
+MF2='NM':'trimf',[0 75 150]
+MF3='P':'trimf',[75 150 225]
+MF4='PM':'trimf',[150 225 300]
+MF5='PB':'trimf',[225 300 375]
+
+[Input2]
+Name='de'
+Range=[0 10]
+NumMFs=5
+MF1='NL':'trimf',[-2.5 -2.776e-017 2.5]
+MF2='NM':'trimf',[0 2.5 5]
+MF3='P':'trimf',[2.5 5 7.5]
+MF4='PM':'trimf',[5 7.5 10]
+MF5='PB':'trimf',[7.5 10 12.5]
+
+[Output1]
+Name='firingangle'
+Range=[0 180]
+NumMFs=5
+MF1='NL':'trimf',[-45 -4.441e-016 45]
+MF2='NM':'trimf',[-1.91095238095238 44.1190476190476 88.1190476190476]
+MF3='P':'trimf',[45 90 135]
+MF4='PM':'trimf',[90 135 180]
+MF5='PB':'trimf',[135 180 225]
+
+[Rules]
+1 1, 5 (1) : 1
+2 1, 5 (1) : 1
+3 1, 2 (1) : 1
+4 1, 2 (1) : 1
+5 1, 1 (1) : 1
+1 2, 5 (1) : 1
+2 2, 5 (1) : 1
+3 2, 2 (1) : 1
+4 2, 3 (1) : 1
+5 2, 1 (1) : 1
+1 3, 3 (1) : 1
+2 3, 4 (1) : 1
+3 3, 2 (1) : 1
+4 3, 2 (1) : 1
+5 3, 3 (1) : 1
+1 4, 2 (1) : 1
+2 4, 3 (1) : 1
+3 4, 2 (1) : 1
+4 4, 2 (1) : 1
+5 4, 4 (1) : 1
+1 5, 1 (1) : 1
+2 5, 2 (1) : 1
+3 5, 2 (1) : 1
+4 5, 1 (1) : 1
+5 5, 1 (1) : 1
